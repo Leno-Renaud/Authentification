@@ -18,3 +18,8 @@ export async function handleLogin(request, reply) {
 
   reply.send({ token });
 }
+
+export async function handleMe(request, reply) {
+  //Dans insomnia>header, Host>Authorisation, calculate> Bearer + token 
+    return reply.send({ user: request.user });
+}
